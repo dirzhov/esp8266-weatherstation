@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="main.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main.min.css">
+</head>
+<body>
+<div>
+<div style="text-align:right">
+    <span class="mr1 h">IP:</span>
+    <span id="ip" class="mr1 hl"></span>
+    <span class="mr1 h">SSID:</span>
+    <span id="ssid" class="hl"></span>
+</div>
+<div class="r-tabs">
+    <ul class="r-tabs-nav">
+        <li class="r-tabs-tab"><a href="#tab-1" class="r-tabs-anchor">Temp/Hum</a></li>
+        <li class="r-tabs-tab"><a href="#tab-2" class="r-tabs-anchor">Light</a></li>
+        <li class="r-tabs-tab"><a href="#tab-3" class="r-tabs-anchor">Week</a></li>
+        <li class="r-tabs-tab"><a href="#tab-4" class="r-tabs-anchor">Month</a></li>
+    </ul>
+    <div class="tabscontent">
+        <div class="r-tabs-accordion-title"><a href="#tab-1" class="r-tabs-anchor">Temp/Hum</a></div>
+        <div id="tab-1" class="r-tabs-panel">
+            <div class="mb1">
+                <button class="btn" id="clear_temp">Clear</button>
+            </div>
+            <div class="scrollable-chart dragscroll">
+                <div>
+                <canvas id="tempChart" height="520"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="r-tabs-accordion-title"><a href="#tab-2" class="r-tabs-anchor">Light</a></div>
+        <div id="tab-2" class="r-tabs-panel">
+            <div class="mb1">
+                <button class="btn blue" id="clear_light">Clear</button>
+            </div>
+            <div class="scrollable-chart dragscroll">
+                <div>
+                <canvas id="lightChart" height="520"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="r-tabs-accordion-title"><a href="#tab-3" class="r-tabs-anchor">Week</a></div>
+        <div id="tab-3" class="r-tabs-panel">
+            <div class="scrollable-chart dragscroll">
+                <div>
+                <canvas id="weekChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="r-tabs-accordion-title"><a href="#tab-4" class="r-tabs-anchor">Month</a></div>
+        <div id="tab-4" class="r-tabs-panel">
+            <div class="scrollable-chart dragscroll">
+                <div>
+                <canvas id="monthChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
