@@ -2,8 +2,8 @@
 SET main_min_js=main.min.js
 SET main_min_css=main.min.css
 java -jar htmlcompressor-1.5.3.jar -o ./data ./web/index.html
-java -jar yuicompressor-2.4.8.jar web/main.js -o \web\%main_min_js%
-java -jar yuicompressor-2.4.8.jar web/main.css -o web/%main_min_css%
+java -jar yuicompressor-2.4.8.jar web/main.js -o "web\%main_min_js%"
+java -jar yuicompressor-2.4.8.jar web/main.css -o "web\%main_min_css%"
 del ".\data\%main_min_js%"
 del ".\data\%main_min_css%"
 type ".\web\moment.min.js" >> data/%main_min_js%

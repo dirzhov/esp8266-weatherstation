@@ -4,12 +4,14 @@ authors : Dmitry Irzhov
 license : MIT */
 $(document).ready(function(){
     var loc = window.location;
-    window.host = loc.protocol!=''?loc.protocol+'//':'';
-    window.host = loc.host!=''?window.host+loc.host:'';
-    window.host = loc.port!=''?window.host+':'+loc.port+'/':'';
+    window.host = loc.protocol!=''?(loc.protocol+'//'):'';
+    window.host = loc.host!=''?(window.host+loc.host):'';
+    window.host = loc.port!=''?(window.host+':'+loc.port):window.host;
     
     if (window.host == '')
         window.host = 'http://192.168.1.85/';
+	else
+		window.host += '/';
 
     window.chartColors = {
         red: 'rgb(255,99,132)',
